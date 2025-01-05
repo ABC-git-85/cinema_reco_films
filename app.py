@@ -18,7 +18,7 @@ st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 ################################# BASE DE DONNÉES #################################
 
 # Charger les données JSON
-with open('data/data_id_ml_final.json', 'r', encoding='utf-8') as file:
+with open('data/data_final.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
 
 # Configuration de l'API
