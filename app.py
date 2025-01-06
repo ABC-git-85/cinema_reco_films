@@ -108,7 +108,7 @@ def format_date(date_string):
 
 # Interface utilisateur avec Streamlit
 st.title("Qu'est-ce qu'on regarde ce soir ?")
-st.write("✨ Cherchez un film **que vous avez aimé**, on se charge de vous trouver quelques recommandations pour ce soir ✨")
+st.write("✨ Cherchez un film **que vous avez aimé**, on se charge de vous trouver quelque chose pour ce soir ✨")
 
 # Barre de recherche avec suggestions
 movie_titles = get_search_titles()
@@ -180,7 +180,7 @@ if search_title:
                 # Affichage des informations du film recherché
                     if movie_info:
                         st.write(f"**🕔 Durée :** {movie_info.get('runtime', 'Inconnue')} minutes")
-                        st.write(f"**⭐ Note :** {movie_info.get('vote_average', 'Non notée')}")
+                        st.write(f"**⭐ Note :** {movie_info.get('vote_average', 'Non notée'):.1f}")
                         genre_names = [genre['name'] for genre in movie_info.get('genres', [])]
                         st.write(f"**🎭 Genre·s :** {', '.join(genre_names)}")
                         formatted_date = format_date(movie_info.get('release_date'))
@@ -254,7 +254,7 @@ if search_title:
 
                 with col2:
                     st.write(f"**🕔 Durée :** {movie_info.get('runtime', 'Inconnue')} minutes")
-                    st.write(f"**⭐ Note :** {movie_info.get('vote_average', 'Non noté')}")
+                    st.write(f"**⭐ Note :** {movie_info.get('vote_average', 'Non noté'):.1f}")
                     genre_names = [genre['name'] for genre in movie_info.get('genres', [])]
                     st.write(f"**🎭 Genre·s :** {', '.join(genre_names)}")
                     formatted_date = format_date(movie_info.get('release_date'))
