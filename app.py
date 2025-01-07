@@ -18,7 +18,7 @@ st.markdown(f"<style>{css}</style>", unsafe_allow_html=True)
 ################################# BASE DE DONNÉES #################################
 
 # Charger les données JSON
-with open('data/data_final_v1.json', 'r', encoding='utf-8') as file:
+with open('data/data_final_light.json', 'r', encoding='utf-8') as file:
     data = json.load(file)
 
 # Configuration de l'API
